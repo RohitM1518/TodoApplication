@@ -1,6 +1,6 @@
-import moongose from 'moongose'
+import mongoose from 'mongoose'
 
-const subTodoSchema = new moongose.Schema({
+const subTodoSchema = new mongoose.Schema({
     title:{
         type:String,
         required:true,
@@ -13,9 +13,9 @@ const subTodoSchema = new moongose.Schema({
         type:Boolean,
         default:false,
     },
-    completedBefore:{
+    completeBefore:{
         type:Date,
     }
 },{timestamps:true})
 
-export const SubTodo = moongose.model("SubTodo",subTodoSchema)
+export const SubTodo = mongoose.model("SubTodo",subTodoSchema)

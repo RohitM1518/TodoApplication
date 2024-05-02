@@ -11,6 +11,10 @@ app.use(cors())
 app.use(cookieParser())
 
 import userRoutes from './src/routes/user.routes.js'
+import todoRoutes from './src/routes/todo.routes.js'
+import subtodoRoutes from './src/routes/subtodo.routes.js'
 app.use('/user',userRoutes)
+app.use('/todo',todoRoutes)
+app.use('/subtodo',subtodoRoutes)
 
 export {app}

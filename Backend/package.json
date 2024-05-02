@@ -18,6 +18,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.5.0",
     "moongose": "^1.0.0",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "randomcolor": "^0.6.2"
   }
 }

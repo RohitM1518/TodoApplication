@@ -1,20 +1,24 @@
-import moongose from 'moongose'
+import mongoose from 'mongoose'
 
-const todoSchema = new moongose.Schema({
+const todoSchema = new mongoose.Schema({
     title:{
         type:String,
         required:true,
     },
     createdBy:{
-        type: moongose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref:"User"
     },
     subTodos:[
         {
-            type: moongose.Schema.Types.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref:"SubTodo"
         }
-    ]
+    ],
+    color:{
+        type:String,
+        default:"#000000"
+    }
 },{timestamps:true})
 
-export const Todo = moongose.model("Todo",todoSchema)
+export const Todo = mongoose.model("Todo",todoSchema)
